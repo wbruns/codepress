@@ -13,7 +13,7 @@ CodePress is a tech blog website where developers can publish blog posts and int
 
 ## **Installation**
 
-To use my website, simply head over to [the CodePress site here](https://wbruns.github.io/codepress/) and begin sharing your thoughts on coding! After logging in you can post anything you have to say and interact with other user's posts on the website!
+To use my website, simply head over to [the CodePress site here](https://blooming-falls-43636.herokuapp.com/) and begin sharing your thoughts on coding! After logging in you can post anything you have to say and interact with other user's posts on the website!
 
 ## **Usage**
 
