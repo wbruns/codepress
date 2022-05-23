@@ -11,7 +11,7 @@ Comment.init(
             autoIncrement: true,
             allowNull: false
         },
-        text: {
+        comment_text: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {

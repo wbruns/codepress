@@ -8,8 +8,8 @@ router.get('/', (req, res) => {
         order: [['created_at', 'DESC']],
         attributes: [
             'id',
-            'post_url',
             'title',
+            'post_text',
             'created_at'
         ],
         include: [
@@ -41,8 +41,8 @@ router.get('/:id', (req, res) => {
         },
         attributes: [
             'id',
-            'post_url',
             'title',
+            'post_text',
             'created_at'
         ],
         include: [
@@ -74,10 +74,10 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-    // expects {title: '', post_url: '', user_id: ''}
+    // expects {title: '', post_text: '', user_id: ''}
     Post.create({
         title: req.body.title,
-        post_url: req.body.post_url,
+        post_text: req.body.post_text,
         user_id: req.session.user_id
     })
         .then(dbPostData => res.json(dbPostData))

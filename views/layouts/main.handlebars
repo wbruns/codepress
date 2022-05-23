@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html lang="en">
 
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
@@ -9,16 +10,19 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
+    <title>CodePress</title>
   </head>
 
   <body>
   <nav class="container-fluid">
     <div class="row align-items-center bg-light border-bottom border-dark">
-      <a href="/" class="col-6 col-md-8 pl-4 h2 text-dark text-decoration-none">CodePress</a>
+      <h1>
+        <a href="/" class="col-6 col-md-8 pl-4 h2 text-dark text-decoration-none">CodePress</a>
+      </h1>
       {{#if loggedIn}}
         <div class="col col-md-2 align-items-center text-center">
           <a
-            href="/profile"
+            href="/dashboard"
             class="badge-light text-decoration-none text-dark"
           >Profile</a>
         </div>
@@ -32,6 +36,10 @@
       </div>
     </div>
   </nav>
+  <main>
+    {{{ body }}}
+  </main>
+  <footer>Built by Will 2022</footer>
 
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -48,6 +56,9 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
   </body>
 
 </html>
